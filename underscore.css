@@ -722,6 +722,20 @@ a:active {
 	max-width: 100%;
 }
 
+.page-content .widget h2 {
+	font-size: 1.5em;
+}
+
+.page-content .widget ul {
+	color: black;
+	list-style-type: disc;
+}
+
+.page-content .widget a {
+	color: #57A3E8;
+	font-size: 1.2em;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
