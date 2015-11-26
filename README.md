@@ -1,6 +1,6 @@
 # StayPuft WordPress Theme
 
-A port of the [StayPuft](https://github.com/dlecina/StayPuft) [Ghost](https://github.com/tryghost/ghost/) theme for [WordPress](http://wordpress.org).
+A port of the [StayPuft](https://github.com/dlecina/StayPuft) [Ghost](https://github.com/tryghost/ghost/) theme for [WordPress](http://wordpress.org). Based on the [underscores](https://github.com/automattic/_s) starter theme.
 
 ## Features
 
