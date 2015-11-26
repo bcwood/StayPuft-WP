@@ -19,8 +19,6 @@
  * Set up the WordPress core custom header feature.
  *
  * @uses staypuft_header_style()
- * @uses staypuft_admin_header_style()
- * @uses staypuft_admin_header_image()
  */
 function staypuft_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'staypuft_custom_header_args', array(
@@ -33,6 +31,13 @@ function staypuft_custom_header_setup() {
 	) ) );
 }
 add_action( 'after_setup_theme', 'staypuft_custom_header_setup' );
+
+register_default_headers( array(
+    'staypuft_header' => array(
+		'url'   => get_template_directory_uri() . '/images/staypuft.png',
+		'thumbnail_url' => get_template_directory_uri() . '/images/staypuft.png',
+		'description'   => _x( 'StayPuft', 'StayPuft Header', 'staypuft' ) ),
+) );
 
 if ( ! function_exists( 'staypuft_header_style' ) ) :
 /**
@@ -53,54 +58,3 @@ function staypuft_header_style() {
 	<?php
 }
 endif; // staypuft_header_style
-
-if ( ! function_exists( 'staypuft_admin_header_style' ) ) :
-/**
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * @see staypuft_custom_header_setup().
- */
-function staypuft_admin_header_style() {
-	return;
-?>
-	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
-		}
-	</style>
-<?php
-}
-endif; // staypuft_admin_header_style
-
-if ( ! function_exists( 'staypuft_admin_header_image' ) ) :
-/**
- * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * @see staypuft_custom_header_setup().
- */
-function staypuft_admin_header_image() {
-	return;
-?>
-	<div id="headimg">
-		<h1 class="displaying-header-text">
-			<a id="name" style="<?php echo esc_attr( 'color: #' . get_header_textcolor() ); ?>" onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-		</h1>
-		<div class="displaying-header-text" id="desc" style="<?php echo esc_attr( 'color: #' . get_header_textcolor() ); ?>"><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-			<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
-	</div>
-<?php
-}
-endif; // staypuft_admin_header_image
