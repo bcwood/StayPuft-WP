@@ -33,7 +33,7 @@ function staypuft_theme_options() {
         "instagram" =>  array( "name" => "Instagram", "prefix" => "https://instagram.com/", "placeholder" => "username", "icon_class" => "fa fa-instagram" ),
         "facebook" =>   array( "name" => "Facebook", "prefix" => "https://facebook.com/", "placeholder" => "username", "icon_class" => "fa fa-facebook" ),
 		"youtube" =>    array( "name" => "YouTube", "prefix" => "https://youtube.com/user/", "placeholder" => "username", "icon_class" => "fa fa-youtube-play" ),
-		"linkedin" =>   array( "name" => "LinkedIn", "prefix" => "https://linedin.com/in/", "placeholder" => "username", "icon_class" => "fa fa-linkedin" ),
+		"linkedin" =>   array( "name" => "LinkedIn", "prefix" => "https://linkedin.com/in/", "placeholder" => "username", "icon_class" => "fa fa-linkedin" ),
 		"googleplus" => array( "name" => "Google+", "prefix" => "https://plus.google.com/", "placeholder" => "username", "icon_class" => "fa fa-google-plus" ),
 		"contact" =>    array( "name" => "Contact", "prefix" => "mailto:", "placeholder" => "email", "icon_class" => "fa fa-envelope" ),
     );        
