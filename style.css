@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Brandon Wood
 Author URI: http://bcwood.me
 Description: Port of the staypuft Ghost theme, by David Lecina.
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: staypuft
@@ -151,6 +151,20 @@ blockquote cite {
 
 blockquote cite a { 
     font-weight: normal; 
+}
+
+figure:has(figcaption) {
+    background: #eee;
+    padding: 8px 8px 0 8px;
+}
+  
+figcaption {
+    background: #eee;
+    font-size: 0.9em;
+    padding-bottom: 8px;
+    padding-top: 4px;
+    margin-top: 0 !important;
+    text-align: center;
 }
 
 mark {
